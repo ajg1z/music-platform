@@ -1,6 +1,34 @@
+@import url('./reset.scss');
+@import url('./utils.scss');
+@import url('./variables/global.scss');
+@import url('./theme/dark.scss');
+@import url('./theme/orange.scss');
+
 @font-face {
-    font-family: 'MainFont';
-    src: url('../../shared/assets/fonts/TT Marxiana Trial Grotesque.ttf') format('ttf');
+    font-family: '"MainFont"';
+    src: url('../../shared/assets/fonts/TTMarxianaTrialGrotesque.ttf') format('ttf');
     font-weight: 400;
     font-style: normal;
+}
+
+body {
+    font-size: var(--font-m);
+    color: var(--primary-color);
+    /* stylelint-disable-next-line */
+    font-family: 'MainFont';
+}
+
+.app {
+    min-height: 100vh;
+    background-color: var(--bg-color);
+}
+
+.content-page {
+    gap: 10px;
+    justify-content: center;
+    display: flex;
+}
+
+.page-wrapper {
+    width: var(--content-width);
 }

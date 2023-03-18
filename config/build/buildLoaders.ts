@@ -2,7 +2,7 @@ import { buildCssLoader } from './loaders/buildCssLoader';
 import { BuildOptions } from './types/config';
 
 export const buildLoaders = (options: BuildOptions) => {
-    const cssLoader = buildCssLoader();
+    const cssLoader = buildCssLoader(options.isDev);
 
     const svgLoader = {
         test: /\.svg$/,

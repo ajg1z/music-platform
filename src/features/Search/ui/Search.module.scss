@@ -1,0 +1,32 @@
+.Search {
+    width: 630px;
+    height: 38px;
+
+    & > span {
+        height: 38px;
+
+        & > span {
+            box-shadow: none;
+
+            input {
+                font-size: 17px !important;
+            }
+
+            height: 38px;
+
+            button {
+                height: 38px !important;
+                padding-left: 30px;
+                padding-right: 30px;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}

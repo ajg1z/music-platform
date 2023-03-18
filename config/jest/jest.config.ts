@@ -23,4 +23,7 @@ export default {
         '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'jestMockComponent.tsx'),
     },
+    transformIgnorePatterns: [
+        '/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$',
+    ],
 };

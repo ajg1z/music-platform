@@ -1,0 +1,33 @@
+.Navbar {
+    height: var(--navbar-height);
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    background-color: var(--inverted-bg-color);
+    margin-bottom: 5px;
+    z-index: var(--navbar-z-index);
+}
+
+.content {
+    max-width: 1100px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 200px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: var(--font-xl);
+}

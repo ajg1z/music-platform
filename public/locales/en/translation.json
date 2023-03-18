@@ -1,0 +1,38 @@
+{
+    "lan": "English",
+    "menu": {
+        "genres": "Genres",
+        "artists": "Artists",
+        "albums": "Albums",
+        "radio": "Radio",
+        "collections": "Collections"
+    },
+    "not_found_page": "Page not found",
+    "page_error": "Something went wrong...",
+    "reload_page": "Reload page",
+    "button": {
+        "toggle": "Toggle",
+        "edit": "Edit",
+        "cancel": "Сancel",
+        "save": "Save",
+        "search": "Search",
+        "find": "Find"
+    },
+    "short_lan": "En",
+    "sign": "Sign in",
+    "login": "Username",
+    "password": "Password",
+    "login_error": {
+        "bag_request": "Username or password is wrong",
+        "internal_server": "Internal Server Error"
+    },
+    "form_auth": "Authorization form",
+    "logout": "Logout",
+    "search": {
+        "by_name": "By name",
+        "by_artist": "By artist",
+        "by_collection": "By collection",
+        "by_radio": "By radio"
+    },
+    "myMusic": "My music"
+}
