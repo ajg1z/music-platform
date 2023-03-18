@@ -2,11 +2,13 @@
 import { useTranslation } from 'react-i18next';
 import cn from 'classnames';
 import { PropsWithChildren, useState, useMemo, useCallback, useRef } from 'react';
-import { Input, Dropdown, MenuProps, InputRef } from 'antd';
 import { MenuFoldOutlined } from '@ant-design/icons/lib/icons';
 import { useNavigate } from 'react-router-dom';
 import { RoutePaths } from 'shared/config/routeConfig/routeConfig';
 import cls from './Search.module.scss';
+import { Input } from 'shared/ui/Input';
+import { Icon } from 'shared/ui/Icon';
+import { Button } from 'shared/ui/Button';
 
 interface SearchProps {
     className?: string;
@@ -51,50 +53,26 @@ export const Search = (props: PropsWithChildren<SearchProps>) => {
         }
     };
 
-    const filter = useMemo(() => {
-        let filterText = t('search.by_name');
+    const activeFilterText = useMemo(() => {
         switch (activeFilter) {
             case '2':
-                filterText = t('search.by_artist');
-                break;
+                return t('search.by_artist');
             case '3':
-                filterText = t('search.by_collection');
-                break;
+                return t('search.by_collection');
             case '4':
-                filterText = t('search.by_radio');
-                break;
+                return t('search.by_radio');
             default:
-                filterText = t('search.by_name');
+                return t('search.by_name');
         }
-
-        return (
-            <Dropdown
-                menu={{
-                    items: filterOptions,
-                    selectable: true,
-                    selectedKeys: [activeFilter],
-                    onSelect: (e) => {
-                        setFilter(e.key);
-                    },
-                }}
-                trigger={['click']}
-            >
-                <div className={cls.filter}>
-                    <p>{filterText}</p>
-                    <MenuFoldOutlined />
-                </div>
-            </Dropdown>
-        );
-    }, [activeFilter, t, filterOptions]);
+    }, [activeFilter, t]);
 
     return (
-        <Input.Search
-            suffix={filter}
-            enterButton={t('button.find')}
-            className={cn(cls.Search, className)}
-            onSearch={onSearch}
-            ref={searchRef}
-            required
-        />
+        <div className={cls.Search}>
+            <Input />
+            <div className={cls.activeFilter}>{activeFilterText}</div>
+            <Icon Svg={MenuFoldOutlined} />
+
+            <Button>{t('button.find')}</Button>
+        </div>
     );
 };

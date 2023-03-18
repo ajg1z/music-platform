@@ -1,5 +1,11 @@
-import { CSSProperties, ImgHTMLAttributes, memo, PropsWithChildren, useMemo } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import {
+    CSSProperties,
+    ImgHTMLAttributes,
+    memo,
+    PropsWithChildren,
+    useMemo,
+} from 'react';
+import cn from 'classNames';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
@@ -23,7 +29,7 @@ export const Avatar = memo((props: PropsWithChildren<AvatarProps>) => {
         <img
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
-            className={classNames(cls.avatar, {}, [className])}
+            className={cn(cls.avatar, className)}
             alt={alt}
             style={styles}
         />

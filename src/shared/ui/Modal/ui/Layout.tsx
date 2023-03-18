@@ -1,6 +1,6 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { classNames } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 import { ModalAnimationTime } from './Modal';
 import cls from './Modal.module.scss';
 
@@ -10,6 +10,7 @@ interface LayoutProps {
     onClose: () => void;
     className?: string;
     isOpen: boolean;
+    children?: ReactNode;
 }
 
 const overlayAnimation = {
@@ -39,7 +40,7 @@ export const Layout: FC<LayoutProps> = (props) => {
     }, [isOpen]);
 
     return (
-        <div className={classNames(cls.Modal, {}, [className])}>
+        <div className={cn(cls.Modal, className)}>
             <CSSTransition
                 timeout={ModalAnimationTime}
                 mountOnEnter

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { classNames, ClassNamesMods } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 
 import { memo, PropsWithChildren, SelectHTMLAttributes, useMemo } from 'react';
 import cls from './Select.module.scss';
@@ -29,12 +29,12 @@ export const Select = memo((props: PropsWithChildren<SelectProps>) => {
         [options],
     );
 
-    const mods: ClassNamesMods = {
+    const mods = {
         [cls.readOnly]: readOnly,
     };
 
     return (
-        <div className={classNames(cls.Wrapper, mods, [className])}>
+        <div className={cn(cls.Wrapper, mods, className)}>
             {label && (
                 <label htmlFor='select_label' className={cls.label}>
                     {label}

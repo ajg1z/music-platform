@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 import cls from './Field.module.scss';
 
 interface FieldProps {
@@ -12,7 +12,7 @@ export function Field(props: PropsWithChildren<FieldProps>) {
 
     return (
         // eslint-disable-next-line jsx-a11y/label-has-associated-control
-        <label className={classNames(cls.Field, {}, [className])}>
+        <label className={cn(cls.Field, className)}>
             <span>{label}</span>
             {children}
         </label>

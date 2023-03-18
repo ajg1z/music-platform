@@ -1,5 +1,5 @@
 import { CSSProperties, FC } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 import cls from './Skeleton.module.scss';
 
 interface SkeletonProps {
@@ -18,5 +18,5 @@ export const Skeleton: FC<SkeletonProps> = (props) => {
         height,
     };
 
-    return <div style={styles} className={classNames(cls.Skeleton, {}, [className])} />;
+    return <div style={styles} className={cn(cls.Skeleton, className)} />;
 };

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unused-prop-types */
 import { InputHTMLAttributes, memo, useEffect, useRef } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 import cls from './Input.module.scss';
 
 export type InputTheme = 'background' | 'backgroundInverted' | 'outline';
@@ -35,7 +35,7 @@ export const Input = memo((props: InputProps) => {
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
             ref={inputRef}
-            className={classNames(cls.Input, {}, [className, cls[theme]])}
+            className={cn(cls.Input, className, cls[theme])}
         />
     );
 });

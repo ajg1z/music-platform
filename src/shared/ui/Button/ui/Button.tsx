@@ -1,4 +1,4 @@
-import { classNames, ClassNamesMods } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 import { FC, ButtonHTMLAttributes, memo } from 'react';
 import cls from './Button.module.scss';
 
@@ -21,16 +21,23 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = memo((props) => {
-    const { className, children, theme = 'primary', square, size = 'M', ...otherProps } = props;
+    const {
+        className,
+        children,
+        theme = 'primary',
+        square,
+        size = 'M',
+        ...otherProps
+    } = props;
 
-    const mods: ClassNamesMods = {
+    const mods = {
         [cls.square]: square,
     };
 
     return (
         <button
             type='button'
-            className={classNames(cls.Button, mods, [className, cls[theme], cls[size]])}
+            className={cn(cls.Button, mods, className, cls[theme], cls[size])}
             // eslint-disable-next-line react/jsx-props-no-spreading
             {...otherProps}
         >

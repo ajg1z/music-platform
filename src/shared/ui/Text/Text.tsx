@@ -1,4 +1,4 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import cn from 'classNames';
 import { memo, PropsWithChildren } from 'react';
 import cls from './Text.module.scss';
 
@@ -16,10 +16,17 @@ interface TextProps {
 }
 
 export const Text = memo((props: PropsWithChildren<TextProps>) => {
-    const { className, text, title, align = 'left', theme = 'primary', size = 'M' } = props;
+    const {
+        className,
+        text,
+        title,
+        align = 'left',
+        theme = 'primary',
+        size = 'M',
+    } = props;
 
     return (
-        <div className={classNames(cls.Text, {}, [className, cls[theme], cls[align], cls[size]])}>
+        <div className={cn(cls.Text, className, cls[theme], cls[align], cls[size])}>
             {title && <p className={cls.title}>{title}</p>}
             {text && <p className={cls.text}>{text}</p>}
         </div>

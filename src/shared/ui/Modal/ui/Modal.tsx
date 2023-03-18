@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect } from 'react';
+import { FC, ReactNode, useCallback, useEffect } from 'react';
 import { Portal } from 'shared/ui/Portal/Portal';
 import { useMount } from '../lib/useMount';
 import { Layout } from './Layout';
@@ -9,6 +9,7 @@ interface ModalProps {
     width?: number;
     height?: number;
     className?: string;
+    children?: ReactNode;
 }
 
 export const ModalAnimationTime = 300;
