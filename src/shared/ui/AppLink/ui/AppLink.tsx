@@ -1,4 +1,4 @@
-import cn from 'classNames';
+import cn from 'classnames';
 import { FC, memo } from 'react';
 import { LinkProps, Link } from 'react-router-dom';
 import cls from './AppLink.module.scss';

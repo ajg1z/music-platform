@@ -1,4 +1,4 @@
-import cn from 'classNames';
+import cn from 'classnames';
 import { FC, ButtonHTMLAttributes, memo } from 'react';
 import cls from './Button.module.scss';
 
@@ -21,14 +21,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button: FC<ButtonProps> = memo((props) => {
-    const {
-        className,
-        children,
-        theme = 'primary',
-        square,
-        size = 'M',
-        ...otherProps
-    } = props;
+    const { className, children, theme = 'primary', square, size = 'M', ...otherProps } = props;
 
     const mods = {
         [cls.square]: square,

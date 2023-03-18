@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import cn from 'classNames';
+import cn from 'classnames';
 
 import { memo, PropsWithChildren, SelectHTMLAttributes, useMemo } from 'react';
 import cls from './Select.module.scss';

@@ -1,32 +1,47 @@
 .Search {
     width: 630px;
-    height: 38px;
-
-    & > span {
-        height: 38px;
-
-        & > span {
-            box-shadow: none;
-
-            input {
-                font-size: 17px !important;
-            }
-
-            height: 38px;
-
-            button {
-                height: 38px !important;
-                padding-left: 30px;
-                padding-right: 30px;
-                box-shadow: none;
-            }
-        }
-    }
+    height: 36px;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
 }
 
 .filter {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+}
+
+.input {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    width: 60%;
+    flex-shrink: 5;
+    flex-grow: 8;
+}
+
+.activeFilter {
+    flex-grow: 5;
+    flex-shrink: 0;
+}
+
+.bttn {
+    border: none;
+    height: 100%;
+    flex: 0 0 120px;
+}
+
+.dropdown {
+    position: relative;
+    top: 2px;
+    flex: 0;
+    flex-shrink: 0;
+    padding: 0 5px;
     cursor: pointer;
 }

@@ -1,11 +1,5 @@
-import {
-    CSSProperties,
-    ImgHTMLAttributes,
-    memo,
-    PropsWithChildren,
-    useMemo,
-} from 'react';
-import cn from 'classNames';
+import { CSSProperties, ImgHTMLAttributes, memo, PropsWithChildren, useMemo } from 'react';
+import cn from 'classnames';
 import cls from './Avatar.module.scss';
 
 interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {

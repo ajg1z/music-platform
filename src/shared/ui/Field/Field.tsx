@@ -1,5 +1,5 @@
 import type { PropsWithChildren } from 'react';
-import cn from 'classNames';
+import cn from 'classnames';
 import cls from './Field.module.scss';
 
 interface FieldProps {

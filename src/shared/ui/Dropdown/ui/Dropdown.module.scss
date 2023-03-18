@@ -1,0 +1,61 @@
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.DropdownItems {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 2px 2px 10px rgb(0 0 0 / 60%);
+    border-radius: 4px;
+    background: var(--inverted-primary-color);
+}
+
+.Dropdown {
+    position: relative;
+}
+
+.DropdownItem {
+    display: block;
+    padding: 2px 5px;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+    border: none;
+    min-width: max-content;
+    width: 100%;
+    text-align: left;
+}
+
+.activeDropdownItem {
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+}
+
+.dropdownEnter {
+    opacity: 0;
+}
+
+.dropdownEnterActive {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.dropdownExit {
+    opacity: 1;
+}
+
+.dropdownExitActive {
+    transition: opacity 200ms;
+    opacity: 0;
+}

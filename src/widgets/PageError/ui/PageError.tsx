@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-import classNames from 'classnames';
+import cn from 'classnames';
 import { PropsWithChildren, ErrorInfo, memo } from 'react';
 import { Button } from 'antd';
 import cls from './PageError.module.scss';
@@ -24,7 +24,7 @@ export const PageError = memo((props: PropsWithChildren<PageErrorProps>) => {
     }
 
     return (
-        <div className={classNames(cls.PageError, className)}>
+        <div className={cn(cls.PageError, className)}>
             <p>{t('page_error')}</p>
             <Button onClick={onReload}>{t('button.reload')}</Button>
 

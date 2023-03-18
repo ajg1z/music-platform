@@ -1,46 +1,42 @@
+import { CSSTransition } from 'react-transition-group';
 import cn from 'classnames';
-import {
-    PropsWithChildren,
-    memo,
-    ReactNode,
-    useState,
-    useEffect,
-    MouseEvent,
-} from 'react';
+import { PropsWithChildren, ReactNode, useState, useMemo, MouseEvent, useRef } from 'react';
 import cls from './Dropdown.module.scss';
 
 interface DropdownItem {
     label: ReactNode;
-    id: number;
+    id: string;
 }
 
 interface DropdownProps {
     className?: string;
     children?: ReactNode;
     isOpen?: boolean;
-    selectedItem?: number | null;
+    selectedItem?: string | null;
     items: DropdownItem[];
     setIsOpen?: (value: boolean) => void;
-    selectItem?: (id: number | null) => void;
+    selectItem?: (id: string) => void;
 }
 
 export const Dropdown = (props: PropsWithChildren<DropdownProps>) => {
-    const { className, children, isOpen, items, selectedItem, setIsOpen, selectItem } =
-        props;
+    const { className, children, isOpen, items, selectedItem, setIsOpen, selectItem } = props;
+
+    const dropdownRef = useRef<null | HTMLUListElement>(null);
 
     const [isOpenLocal, setIsOpenLocal] = useState(false);
-    const [selectedItemLocal, setItemLocal] = useState<number | null>(null);
+    const [selectedItemLocal, setItemLocal] = useState<string | null>(null);
 
-    const [control, setControl] = useState<{}>('local');  
     const onClickWrapper = (e: MouseEvent) => {
         e.stopPropagation();
 
         if (isOpen === undefined) {
             setIsOpenLocal((state) => !state);
+        } else {
+            setIsOpen?.(!isOpen);
         }
     };
 
-    const onSelectItem = (id: number) => {
+    const onSelectItem = (id: string) => {
         if (selectedItem === undefined) {
             setItemLocal(id);
         } else if (selectItem) {
@@ -50,33 +46,44 @@ export const Dropdown = (props: PropsWithChildren<DropdownProps>) => {
 
     const onClose = () => {
         if (isOpen === undefined) {
+            setIsOpenLocal(false);
+        } else {
+            setIsOpen?.(false);
         }
     };
 
-    useEffect(() => {
-        if (isOpen === undefined) {
-            setControl('local');
-        }
-
-        if (selectedItem === undefined) {
-            set;
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    const dropdownAnimationClasses = useMemo(
+        () => ({
+            enter: cls.dropdownEnter,
+            enterActive: cls.dropdownEnterActive,
+            exit: cls.dropdownExit,
+            exitActive: cls.dropdownExitActive,
+        }),
+        [],
+    );
 
     return (
         <>
             <div className={cn(cls.Dropdown, className)} onClick={onClickWrapper}>
                 {children}
-                {isOpen && (
-                    <ul className={cls.DropdownItems}>
+                <CSSTransition
+                    classNames={dropdownAnimationClasses}
+                    timeout={300}
+                    mountOnEnter
+                    unmountOnExit
+                    nodeRef={dropdownRef}
+                    in={isOpen === undefined ? isOpenLocal : isOpen}
+                >
+                    <ul ref={dropdownRef} className={cls.DropdownItems}>
                         {items.map((item) => (
                             <button
                                 type='button'
-                                className={cn(
-                                    cls.DropdownItem,
-                                    cls.activeDropdownItem && selectedItem === item.id,
-                                )}
+                                className={cn(cls.DropdownItem, {
+                                    [cls.activeDropdownItem]:
+                                        selectedItem === undefined
+                                            ? selectedItemLocal === item.id
+                                            : selectedItem === item.id,
+                                })}
                                 key={item.id}
                                 onClick={() => onSelectItem(item.id)}
                             >
@@ -84,12 +91,10 @@ export const Dropdown = (props: PropsWithChildren<DropdownProps>) => {
                             </button>
                         ))}
                     </ul>
-                )}
+                </CSSTransition>
             </div>
 
-            {(isOpen || isOpenLocal) && (
-                <div className={cls.background} onClick={onClose} />
-            )}
+            {(isOpen || isOpenLocal) && <div className={cls.background} onClick={onClose} />}
         </>
     );
 };

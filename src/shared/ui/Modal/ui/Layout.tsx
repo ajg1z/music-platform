@@ -1,6 +1,6 @@
 import { FC, ReactNode, useEffect, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import cn from 'classNames';
+import cn from 'classnames';
 import { ModalAnimationTime } from './Modal';
 import cls from './Modal.module.scss';
 

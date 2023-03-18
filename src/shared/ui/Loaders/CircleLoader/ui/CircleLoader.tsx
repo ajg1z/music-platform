@@ -1,5 +1,5 @@
 import { FC, memo } from 'react';
-import cn from 'classNames';
+import cn from 'classnames';
 import cls from './CircleLoader.module.scss';
 
 type CircleLoaderSize = 'small' | 'medium' | 'large';
