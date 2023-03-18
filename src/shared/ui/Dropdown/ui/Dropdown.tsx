@@ -31,8 +31,7 @@ export const Dropdown = (props: PropsWithChildren<DropdownProps>) => {
     const [isOpenLocal, setIsOpenLocal] = useState(false);
     const [selectedItemLocal, setItemLocal] = useState<number | null>(null);
 
-    const [control, setControl] = useState<{}>('local');
-
+    const [control, setControl] = useState<{}>('local');  
     const onClickWrapper = (e: MouseEvent) => {
         e.stopPropagation();
 

@@ -70,7 +70,7 @@ export const Search = (props: PropsWithChildren<SearchProps>) => {
         <div className={cls.Search}>
             <Input />
             <div className={cls.activeFilter}>{activeFilterText}</div>
-            <Icon Svg={MenuFoldOutlined} />
+            {/* <Icon name='' /> */}
 
             <Button>{t('button.find')}</Button>
         </div>
