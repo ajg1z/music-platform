@@ -7,32 +7,33 @@
         "radio": "Радио онлайн",
         "collections": "Сборники"
     },
-    "not_found_page": "Страница не найдена",
-    "page_error": "Что то пошло не так...",
-    "reload_page": "Обновить страницу",
+    "notFoundPage": "Страница не найдена",
+    "pageError": "Что то пошло не так...",
+    "reloadPage": "Обновить страницу",
     "button": {
         "toggle": "Переключить",
         "edit": "Редактировать",
         "cancel": "Отменить",
         "save": "Сохранить",
         "search": "Поиск",
-        "find": "Найти"
+        "find": "Найти",
+        "showAll": "Показать все"
     },
-    "short_lan": "Ru",
+    "shortLan": "Ru",
     "sign": "Войти",
     "login": "Логин",
     "password": "Пароль",
-    "login_error": {
-        "bag_request": "Логин или пароль не правильный",
-        "internal_server": "Internal Server Error"
+    "loginError": {
+        "bagRequest": "Логин или пароль не правильный",
+        "internalServer": "Internal Server Error"
     },
-    "form_auth": "Форма авторизации",
+    "formAuth": "Форма авторизации",
     "logout": "Выйти",
     "myMusic": "Моя музыка",
     "search": {
-        "by_name": "По имени",
-        "by_artist": "По исполнителю",
-        "by_collection": "По сборникам",
-        "by_radio": "По радиостанциям"
+        "byName": "По имени",
+        "byArtist": "По исполнителю",
+        "byCollection": "По сборникам",
+        "byRadio": "По радиостанциям"
     }
 }

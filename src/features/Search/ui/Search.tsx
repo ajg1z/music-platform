@@ -60,13 +60,13 @@ export const Search = (props: PropsWithChildren<SearchProps>) => {
     const activeFilterText = useMemo(() => {
         switch (activeFilter) {
             case '2':
-                return t('search.by_artist');
+                return t('search.byArtist');
             case '3':
-                return t('search.by_collection');
+                return t('search.byCollection');
             case '4':
-                return t('search.by_radio');
+                return t('search.byRadio');
             default:
-                return t('search.by_name');
+                return t('search.byName');
         }
     }, [activeFilter, t]);
 

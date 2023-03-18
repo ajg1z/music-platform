@@ -25,7 +25,7 @@ export const PageError = memo((props: PropsWithChildren<PageErrorProps>) => {
 
     return (
         <div className={cn(cls.PageError, className)}>
-            <p>{t('page_error')}</p>
+            <p>{t('pageError')}</p>
             <Button onClick={onReload}>{t('button.reload')}</Button>
 
             {info && <div className={cls.infoLog}>{printInfoError()}</div>}

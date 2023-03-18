@@ -1,0 +1,51 @@
+.Carousel {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.rightBtn,
+.leftBtn {
+    position: absolute;
+    top: 70px;
+    border-radius: 50%;
+    line-height: 1;
+    padding: 8px;
+    border: none;
+
+    & > svg {
+        fill: var(--bg-color);
+        font-size: 18px;
+    }
+}
+
+.rightBtn {
+    right: 0;
+    padding-left: 12px;
+}
+
+.leftBtn {
+    left: 0;
+    padding-right: 12px;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dots {
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: var(--inverted-bg-color);
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+}
