@@ -1,0 +1,41 @@
+.Track {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.play {
+    font-size: 25px;
+    height: 25px;
+}
+
+.author,
+.name {
+    padding: 0 4px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    cursor: pointer;
+    transition: text-decoration 200ms;
+    white-space: nowrap;
+    overflow-x: hidden;
+    max-width: 400px;
+    text-overflow: ellipsis;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.name {
+    max-width: 270px;
+}

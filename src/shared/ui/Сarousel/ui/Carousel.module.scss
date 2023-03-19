@@ -16,27 +16,38 @@
         fill: var(--bg-color);
         font-size: 18px;
     }
+
+    transition: transform 200ms;
 }
 
 .rightBtn {
     right: 0;
     padding-left: 12px;
+
+    &:hover {
+        transform: translateX(-5px);
+    }
 }
 
 .leftBtn {
     left: 0;
     padding-right: 12px;
+
+    &:hover {
+        transform: translateX(5px);
+    }
 }
 
 .items {
-    display: flex;
+    display: grid;
     align-items: center;
-    gap: 10px;
+    justify-items: center;
+    transition: transform 300ms ease-in-out;
 }
 
 .dots {
     justify-content: center;
-    margin-top: 15px;
+    padding: 15px 0;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -48,4 +59,9 @@
     width: 8px;
     height: 8px;
     cursor: pointer;
+}
+
+.activeDot {
+    background-color: transparent;
+    outline: 4px solid var(--inverted-bg-color);
 }

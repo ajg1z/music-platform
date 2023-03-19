@@ -1,1 +1,2 @@
-export { Track } from './model/types/track';
+export { Track } from './ui/Track/Track';
+export { ITrack } from './model/types/track';

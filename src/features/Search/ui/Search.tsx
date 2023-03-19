@@ -26,19 +26,19 @@ export const Search = (props: PropsWithChildren<SearchProps>) => {
         () => [
             {
                 id: '1',
-                label: t('search.by_name'),
+                label: t('search.byName'),
             },
             {
                 id: '2',
-                label: t('search.by_artist'),
+                label: t('search.byArtist'),
             },
             {
                 id: '3',
-                label: t('search.by_collection'),
+                label: t('search.byCollection'),
             },
             {
                 id: '4',
-                label: t('search.by_radio'),
+                label: t('search.byRadio'),
             },
         ],
         [t],

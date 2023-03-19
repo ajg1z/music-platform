@@ -1,8 +1,13 @@
 .title {
     font-size: 14px;
-    padding: 8px 5px;
+    margin: 8px 5px;
     color: inherit;
     font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // количество строк
+    /* stylelint-disable-next-line CssSyntaxError */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .multipleImages {
@@ -46,6 +51,7 @@
     background-color: var(--inverted-bg-color);
     color: var(--primary-color);
     border-radius: 5px;
+    overflow: hidden;
 
     &:hover {
         .title {

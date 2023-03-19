@@ -1,7 +1,8 @@
-import { Track } from 'entities/Track';
+import { ITrack } from 'entities/Track';
 
 export interface Collection {
     id: string;
     name: string;
-    tracks: Track[];
+    images: string[];
+    tracks: ITrack[];
 }

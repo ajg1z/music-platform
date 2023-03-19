@@ -1,4 +1,4 @@
-export interface Track {
+export interface ITrack {
     name: string;
     author: string;
     text: string;
