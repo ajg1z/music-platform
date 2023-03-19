@@ -23,7 +23,7 @@ export const Text = memo((props: PropsWithChildren<TextProps>) => {
         text,
         title,
         align = 'left',
-        theme = 'primary',
+        theme,
         size = 'M',
         wrapCls,
         titleCls,
@@ -36,9 +36,9 @@ export const Text = memo((props: PropsWithChildren<TextProps>) => {
             className={cn(
                 cls.Text,
                 wrapCls,
-                cls[theme],
-                cls[align],
-                cls[size],
+                cls[`theme-${theme}`],
+                cls[`align-${align}`],
+                cls[`size-${size}`],
                 cls[`fontWeight-${fontWeight}`],
             )}
         >

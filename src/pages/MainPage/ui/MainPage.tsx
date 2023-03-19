@@ -1,54 +1,95 @@
 /* eslint-disable max-len */
 import { TopCollection } from 'entities/TopCollection';
-import { ITrack, Track } from 'entities/Track';
-import type { PropsWithChildren } from 'react';
+import { memo, PropsWithChildren, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
+import { useAppDispatch } from 'shared/hooks/useAppDispatch/useAppDispatch';
+import { DynamicModuleLoader } from 'shared/lib/wrapper/DynamicModuleLoader';
+import { ReducersList } from 'shared/lib/wrapper/DynamicModuleLoader/DynamicModuleLoader';
 import { Button } from 'shared/ui/Button';
-import { Card } from 'shared/ui/Card';
+import { SquareLoader } from 'shared/ui/Loaders/SquareLoader';
 import { Text } from 'shared/ui/Text';
+import { TrackList } from 'widgets/TrackList';
+import {
+    getCollection,
+    getErrorCollection,
+    getErrorTopCollection,
+    getLoadingCollection,
+    getLoadingTopCollection,
+    getTopCollection,
+} from '../model/selectors/mainPage';
+import { fetchCollection } from '../model/service/fetchCollection/fetchCollection';
+import { fetchTopCollection } from '../model/service/fetchTopCollection/fetchTopCollection';
+import { mainPageReducer } from '../model/slice/mainPage.slice';
 import cls from './MainPage.module.scss';
 
 interface MainPageProps {}
 
-const img: string =
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1NQ70ZBNY9Rwg4O5ziIc4czAWhgCZrV-74g&usqp=CAU';
+const reducers: ReducersList = {
+    mainPage: mainPageReducer,
+};
 
-const images = [img, img, img, img];
-const tracks: ITrack[] = [];
-
-const MainPage = (props: PropsWithChildren<MainPageProps>) => {
+const MainPage = memo((props: PropsWithChildren<MainPageProps>) => {
     const { t } = useTranslation('main');
+    const dispatch = useAppDispatch();
+
+    const collection = useSelector(getCollection);
+    const topCollection = useSelector(getTopCollection);
+
+    const isLoadingCollection = useSelector(getLoadingCollection);
+    const isLoadingTopCollection = useSelector(getLoadingTopCollection);
+
+    const errorTopCollection = useSelector(getErrorTopCollection);
+    const errorCollection = useSelector(getErrorCollection);
+
+    useEffect(() => {
+        dispatch(fetchTopCollection('1'));
+        dispatch(fetchCollection('1'));
+    }, [dispatch]);
 
     return (
-        <div>
-            <TopCollection
-                collection={{
-                    id: '1',
-                    name: 'Popular collections',
-                    collections: [
-                        { id: '1', name: 'Every day', tracks, images },
-                        { id: '2', name: 'Sport music', tracks, images },
-                        { id: '3', name: 'Holiday collection', tracks, images },
-                        { id: '4', name: 'Verify', tracks, images },
-                        { id: '5', name: 'Fifteen', tracks, images },
-                        { id: '6', name: 'Ramsteain', tracks, images },
-                        { id: '7', name: 'Hollywood Undead', tracks, images },
-                        { id: '8', name: 'Width Dogs 2', tracks, images },
-                    ],
-                }}
-            />
+        <DynamicModuleLoader reducers={reducers} isRemoveAfterUnmount>
+            <div>
+                {isLoadingTopCollection ? (
+                    <SquareLoader className={cls.loader} />
+                ) : (
+                    topCollection && <TopCollection collection={topCollection} />
+                )}
 
-            <Text title={t('title')} titleCls={cls.title} />
+                {errorTopCollection && (
+                    <Text
+                        theme='error'
+                        align='center'
+                        text={t('errorTopCollection')}
+                        wrapCls={cls.errorText}
+                    />
+                )}
 
-            <Text text={t('subTitle')} wrapCls={cls.subTitle} />
+                <Text title={t('title')} titleCls={cls.title} />
 
-            <Text text={t('text')} textCls={cls.text} />
+                <Text text={t('subTitle')} wrapCls={cls.subTitle} />
 
-            <Button className={cls.btn}>{t('listenTop100')}</Button>
+                <Text text={t('text')} textCls={cls.text} />
 
-            <Track author='Jon Till' image={img} name='Hoop' />
-        </div>
+                <Button className={cls.btn}>{t('listenTop100')}</Button>
+
+                {isLoadingCollection ? (
+                    <SquareLoader className={cls.loader} />
+                ) : (
+                    collection && <TrackList tracks={collection?.tracks} />
+                )}
+
+                {errorCollection && (
+                    <Text
+                        wrapCls={cls.errorText}
+                        align='center'
+                        theme='error'
+                        text={t('errorCollection')}
+                    />
+                )}
+            </div>
+        </DynamicModuleLoader>
     );
-};
+});
 
 export default MainPage;

@@ -1,0 +1,27 @@
+.FullTrack {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 10px;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    border-top: 1px solid #ccc;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.active {
+    background-color: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+
+    svg {
+        fill: var(--inverted-primary-color);
+    }
+}

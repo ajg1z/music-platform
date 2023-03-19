@@ -1,0 +1,630 @@
+{
+    "posts": [{ "id": 1, "title": "json-server", "author": "typicode" }],
+    "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+    "profile": { "name": "typicode" },
+    "topCollections": [
+        {
+            "name": "Popular",
+            "id": "1",
+            "collections": [
+                {
+                    "id": "1",
+                    "name": "Top popular",
+                    "images": [
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU",
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU"
+                    ],
+                    "tracks": [
+                        {
+                            "id": "1",
+                            "name": "typicode",
+                            "author": "1",
+                            "text": "",
+                            "listens": 1,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [{ "id": "1", "name": "Pop" }]
+                        },
+                        {
+                            "id": "2",
+                            "name": "Lanaya exec",
+                            "author": "1",
+                            "text": "",
+                            "listens": 1,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "2",
+                                    "name": "DeepHouse"
+                                },
+                                {
+                                    "id": "3",
+                                    "name": "Rok"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3",
+                            "name": "Kukla",
+                            "author": "2",
+                            "text": "",
+                            "listens": 10,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "7",
+                                    "name": "Russian rep"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4",
+                            "name": "Lanaya exec",
+                            "author": "4",
+                            "text": "",
+                            "listens": 1,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "4",
+                                    "name": "Dj remix"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5",
+                            "name": "Felix",
+                            "author": "5",
+                            "text": "",
+                            "listens": 100,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "3",
+                                    "name": "Rok"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6",
+                            "name": "Law Low",
+                            "author": "4",
+                            "text": "",
+                            "listens": 29,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "11",
+                                    "name": "Trap"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7",
+                            "name": "Call it love",
+                            "author": "7",
+                            "text": "",
+                            "listens": 1,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "3",
+                                    "name": "Rok"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8",
+                            "name": "Hate me",
+                            "author": "3",
+                            "text": "",
+                            "listens": 1,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "9",
+                                    "name": "Vocal trance"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9",
+                            "name": "Pissa",
+                            "author": "10",
+                            "text": "",
+                            "listens": 0,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "10",
+                                    "name": "DnB"
+                                },
+                                {
+                                    "id": "11",
+                                    "name": "Trap"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "10",
+                            "name": "Calm down",
+                            "author": "1",
+                            "text": "",
+                            "listens": 1,
+                            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                            "audio": "",
+                            "genres": [
+                                {
+                                    "id": "6",
+                                    "name": "Shanson"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "collections": [
+        {
+            "id": "1",
+            "name": "Top popular",
+            "images": [
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBU4JSwxlYY2_mvwrtHJpwBQEM39k6leJbyg&usqp=CAU"
+            ],
+            "tracks": [
+                {
+                    "id": "1",
+                    "name": "typicode",
+                    "author": "1",
+                    "text": "",
+                    "listens": 1,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [{ "id": "1", "name": "Pop" }]
+                },
+                {
+                    "id": "2",
+                    "name": "Lanaya exec",
+                    "author": "1",
+                    "text": "",
+                    "listens": 1,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "2",
+                            "name": "DeepHouse"
+                        },
+                        {
+                            "id": "3",
+                            "name": "Rok"
+                        }
+                    ]
+                },
+                {
+                    "id": "3",
+                    "name": "Kukla",
+                    "author": "2",
+                    "text": "",
+                    "listens": 10,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "7",
+                            "name": "Russian rep"
+                        }
+                    ]
+                },
+                {
+                    "id": "4",
+                    "name": "Lanaya exec",
+                    "author": "4",
+                    "text": "",
+                    "listens": 1,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "4",
+                            "name": "Dj remix"
+                        }
+                    ]
+                },
+                {
+                    "id": "5",
+                    "name": "Felix",
+                    "author": "5",
+                    "text": "",
+                    "listens": 100,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "3",
+                            "name": "Rok"
+                        }
+                    ]
+                },
+                {
+                    "id": "6",
+                    "name": "Law Low",
+                    "author": "4",
+                    "text": "",
+                    "listens": 29,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "11",
+                            "name": "Trap"
+                        }
+                    ]
+                },
+                {
+                    "id": "7",
+                    "name": "Call it love",
+                    "author": "7",
+                    "text": "",
+                    "listens": 1,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "3",
+                            "name": "Rok"
+                        }
+                    ]
+                },
+                {
+                    "id": "8",
+                    "name": "Hate me",
+                    "author": "3",
+                    "text": "",
+                    "listens": 1,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "9",
+                            "name": "Vocal trance"
+                        }
+                    ]
+                },
+                {
+                    "id": "9",
+                    "name": "Pissa",
+                    "author": "10",
+                    "text": "",
+                    "listens": 0,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "10",
+                            "name": "DnB"
+                        },
+                        {
+                            "id": "11",
+                            "name": "Trap"
+                        }
+                    ]
+                },
+                {
+                    "id": "10",
+                    "name": "Calm down",
+                    "author": "1",
+                    "text": "",
+                    "listens": 1,
+                    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+                    "audio": "",
+                    "genres": [
+                        {
+                            "id": "6",
+                            "name": "Shanson"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "tracks": [
+        {
+            "id": "1",
+            "name": "typicode",
+            "author": "1",
+            "text": "",
+            "listens": 1,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [{ "id": "1", "name": "Pop" }]
+        },
+        {
+            "id": "2",
+            "name": "Lanaya exec",
+            "author": "1",
+            "text": "",
+            "listens": 1,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "2",
+                    "name": "DeepHouse"
+                },
+                {
+                    "id": "3",
+                    "name": "Rok"
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "name": "Kukla",
+            "author": "2",
+            "text": "",
+            "listens": 10,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "7",
+                    "name": "Russian rep"
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "name": "Lanaya exec",
+            "author": "4",
+            "text": "",
+            "listens": 1,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "4",
+                    "name": "Dj remix"
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "name": "Felix",
+            "author": "5",
+            "text": "",
+            "listens": 100,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "3",
+                    "name": "Rok"
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "name": "Law Low",
+            "author": "4",
+            "text": "",
+            "listens": 29,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "11",
+                    "name": "Trap"
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "name": "Call it love",
+            "author": "7",
+            "text": "",
+            "listens": 1,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "3",
+                    "name": "Rok"
+                }
+            ]
+        },
+        {
+            "id": "8",
+            "name": "Hate me",
+            "author": "3",
+            "text": "",
+            "listens": 1,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "9",
+                    "name": "Vocal trance"
+                }
+            ]
+        },
+        {
+            "id": "9",
+            "name": "Pissa",
+            "author": "10",
+            "text": "",
+            "listens": 0,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "10",
+                    "name": "DnB"
+                },
+                {
+                    "id": "11",
+                    "name": "Trap"
+                }
+            ]
+        },
+        {
+            "id": "10",
+            "name": "Calm down",
+            "author": "1",
+            "text": "",
+            "listens": 1,
+            "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNfCA1uDAA-VA8F478hCO5o4yK3S-48Bnt0Q&usqp=CAU",
+            "audio": "",
+            "genres": [
+                {
+                    "id": "6",
+                    "name": "Shanson"
+                }
+            ]
+        }
+    ],
+    "artists": [
+        {
+            "name": "Jerkson Army",
+            "id": "1"
+        },
+        {
+            "name": "Twice",
+            "id": "2"
+        },
+        {
+            "name": "Ольша Серябкина",
+            "id": "3"
+        },
+        {
+            "name": "Maneskin",
+            "id": "4"
+        },
+        {
+            "name": "NO",
+            "id": "5"
+        },
+        {
+            "name": "Tiesto",
+            "id": "6"
+        },
+        {
+            "name": "Cooc",
+            "id": "7"
+        },
+        {
+            "name": "!!!!!",
+            "id": "8"
+        },
+        {
+            "name": "Arthur",
+            "id": "9"
+        },
+        {
+            "name": "Restricted",
+            "id": "10"
+        },
+        {
+            "name": "J-Hope",
+            "id": "11"
+        },
+        {
+            "name": "Instasamka",
+            "id": "12"
+        },
+        {
+            "name": "Pink",
+            "id": "13"
+        },
+        {
+            "name": "I Keep on",
+            "id": "14"
+        },
+        {
+            "name": "Filatov",
+            "id": "15"
+        },
+        {
+            "name": "The future x",
+            "id": "16"
+        },
+        {
+            "name": "Leningrad",
+            "id": "17"
+        },
+        {
+            "name": "Artik & Asti",
+            "id": "18"
+        },
+        {
+            "name": "Yoop",
+            "id": "19"
+        },
+        {
+            "name": "Shaman",
+            "id": "20"
+        }
+    ],
+    "albums": [],
+    "radio": [],
+    "genres": [
+        {
+            "id": "1",
+            "name": "Pop"
+        },
+        {
+            "id": "2",
+            "name": "DeepHouse"
+        },
+        {
+            "id": "3",
+            "name": "Rok"
+        },
+        {
+            "id": "4",
+            "name": "Dj remix"
+        },
+        {
+            "id": "5",
+            "name": "Russian pop"
+        },
+        {
+            "id": "6",
+            "name": "Shanson"
+        },
+        {
+            "id": "7",
+            "name": "Russian rep"
+        },
+        {
+            "id": "8",
+            "name": "Dance house"
+        },
+        {
+            "id": "9",
+            "name": "Vocal trance"
+        },
+        {
+            "id": "10",
+            "name": "DnB"
+        },
+        {
+            "id": "11",
+            "name": "Trap"
+        }
+    ]
+}

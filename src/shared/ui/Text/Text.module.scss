@@ -6,7 +6,7 @@
     font: var(--font-m);
 }
 
-.primary {
+.theme-primary {
     .title {
         color: var(--primary-color);
     }
@@ -16,7 +16,7 @@
     }
 }
 
-.error {
+.theme-error {
     .title {
         color: var(--red-light);
     }
@@ -26,19 +26,19 @@
     }
 }
 
-.left {
+.align-left {
     text-align: left;
 }
 
-.center {
+.align-center {
     text-align: center;
 }
 
-.right {
+.align-right {
     text-align: right;
 }
 
-.L {
+.size-L {
     .title {
         font: var(--font-xl);
     }
@@ -48,7 +48,7 @@
     }
 }
 
-.M {
+.size-M {
     .title {
         font: var(--font-l);
     }
@@ -59,40 +59,28 @@
 }
 
 .fontWeight-400 {
-    .title {
-        font-weight: 400;
-    }
-
+    .title,
     .text {
         font-weight: 400;
     }
 }
 
 .fontWeight-500 {
-    .title {
-        font-weight: 500;
-    }
-
+    .title,
     .text {
         font-weight: 500;
     }
 }
 
 .fontWeight-600 {
-    .title {
-        font-weight: 600;
-    }
-
+    .title,
     .text {
         font-weight: 600;
     }
 }
 
 .fontWeight-700 {
-    .title {
-        font-weight: 700;
-    }
-
+    .title,
     .text {
         font-weight: 700;
     }
